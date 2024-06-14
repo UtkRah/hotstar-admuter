@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "Hotstar Ad Muter",
+    "description": "Automatically mutes Hotstar ads and unmutes when the video starts.",
+    "version": "1.0",
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.hotstar.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "action": {
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      },
+      "default_title": "Hotstar Ad Muter"
+    }
+  }
+  
